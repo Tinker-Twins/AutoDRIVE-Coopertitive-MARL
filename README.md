@@ -1,4 +1,4 @@
-# Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem
+# Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles
 
 | <img src="Media/Fig1a.png" width="500"> | <img src="Media/Fig1b.png" width="500"> |
 |:--------------------:|:--------------------:|
