@@ -260,3 +260,32 @@ For creating your own training configurations, please refer to the [official tra
 3. As long as possible, duplicate the training agents/environments within the scene to ensure parallel (faster) training.
 
     > ***Note:*** *Make sure to commit changes (if any) to all the duplicates as well!*
+
+## CITATION
+
+We encourage you to read and cite the following papers if you use any part of this repository for your research:
+
+#### [Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem](https://arxiv.org/abs/2309.10007)
+```bibtex
+@eprint{AutoDRIVE-MARL-2023,
+title = {Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem}, 
+author = {Tanmay Vilas Samak and Chinmay Vilas Samak and Venkat Krovi},
+year = {2023},
+eprint = {2309.10007},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
+}
+```
+This work has been accepted as Multi-Agent Dynamic Games (MAD-Games) Workshop paper at **2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).** The publication can be found on [MAD-Games Workshop Website](https://iros2023-madgames.f1tenth.org/papers/samak.pdf).
+
+#### [A Scalable and Parallelizable Digital Twin Framework for Sustainable Sim2Real Transition of Multi-Agent Reinforcement Learning Systems](https://arxiv.org/abs/2403.10996)
+```bibtex
+@eprint{AutoDRIVE-DT-MARL-2024,
+title = {A Scalable and Parallelizable Digital Twin Framework for Sustainable Sim2Real Transition of Multi-Agent Reinforcement Learning Systems}, 
+author = {Chinmay Vilas Samak and Tanmay Vilas Samak and Venkat Krovi},
+year = {2024},
+eprint = {2403.10996},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO}
+}
+```
