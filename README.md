@@ -77,6 +77,9 @@ Apart from completing several laps, we noticed some clever strategies that the a
 |:------------------------------------------------------:|
 | <img src="Media/Fig12b.png" width="1500"> |
 
+After extensive simulation-based verification of the trained policies, they were transferred onto a physical vehicle (so as to exploit the real-world characteristics of the vehicle
+dynamics and tire-road interconnect), which was embedded within a true digital twin framework as depicted above (captured at 1 Hz). Particularly, a single physical vehicle was deployed in the loop with multiple virtual peer vehicles, which collectively embodied the multi-agent system. This method of augmenting the environmental elements and peer agents in the digital space was established for being resource-altruistic. This experiment validated the sim2real transferability of the trained MARL policies, without over-utilizing the hardware resources. It is worth mentioning that the digital twin framework supports incrementally deploying multiple vehicles in the real world based on the hardware resources at the disposal. Such incremental digital twin deployments can also ensure minimal physical damage, especially while deploying nascent MARL algorithms.
+
 ## SETUP
 
 1. [Download](https://unity.com/download) and [install](https://docs.unity3d.com/hub/manual/InstallHub.html) Unity Hub along with Unity 2021.3.9f1 (LTS) or higher.
