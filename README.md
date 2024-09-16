@@ -93,31 +93,13 @@ dynamics and tire-road interconnect), which was embedded within a true digital t
       ```
     - Unzip source files larger than 100 MB:
       > ***Note:*** *You may delete the `*.zip` and `*.zip.meta` files after the unzipping operation.*
-      - [AutoDRIVE/Assets/Environments/Off-Road Terrain/Terrain Meshes/](https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes)
-        - [Terrain00.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain00.zip)
-        - [Terrain01.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain01.zip)
-        - [Terrain02.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain02.zip)
-        - [Terrain03.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain03.zip)
-        - [Terrain04.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain04.zip)
-        - [Terrain05.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain05.zip)
-        - [Terrain06.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain06.zip)
-        - [Terrain07.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain07.zip)
-        - [Terrain08.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Off-Road%20Terrain/Terrain%20Meshes/Terrain08.zip)
-      - [AutoDRIVE/Assets/Environments/Windridge%20City/Scenes](https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator/Assets/Environments/Windridge%20City/Scenes)
-        - [Windridge City.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Windridge%20City/Scenes/Windridge%20City.zip)
-      - [AutoDRIVE/Assets/Models/Vehicle/RZR](https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator/Assets/Models/Vehicle/RZR)
-        - [Polaris_RZR.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Models/Vehicle/RZR/Polaris_RZR.zip)
-        - [Polaris_RZR_Pro_R_4_Sport.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Models/Vehicle/RZR/Polaris_RZR_Pro_R_4_Sport.zip)
-      - [AutoDRIVE/Assets/Scenes](https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator/Assets/Scenes)
-        - [City.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/City.zip)
-        - [Intersection School.zip](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/Intersection%20School.zip)
 
     - Launch Unity Hub and select `ADD` project button. Navigate to the download directory and select the parent folder of the `AutoDRIVE` repository.
   
     - Launch AutoDRIVE Simulator by running the project.
       > ***Note:*** *It may take several minutes to import and load the project for the first time. Please be patient.*
     
-    - Bake lightmaps for [Windridge City](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Environments/Windridge%20City/Scenes/Windridge%20City.zip) and [City](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/City.zip) scenes.
+    - Bake lightmaps for larger scenes.
       > ***Note:*** *The lightmap baking process may take several minutes/hours depending upon the computational platform.*
   
     - For this project, we'll be working with the [Intersection School](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/Intersection%20School.zip) and [Multi-Agent F1TENTH](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/Multi-Agent%20F1TENTH.unity) scenes. Ensure that you can open and run them.
