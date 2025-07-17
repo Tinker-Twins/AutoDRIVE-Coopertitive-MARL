@@ -1,4 +1,4 @@
-# Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles
+# Mixed-Reality Digital Twins for Hybrid Sim2Real Transfer of Multi-Agent Reinforcement Learning Policies
 
 | <img src="Media/Fig1a.png" width="500"> | <img src="Media/Fig1b.png" width="500"> |
 |:--------------------:|:--------------------:|
