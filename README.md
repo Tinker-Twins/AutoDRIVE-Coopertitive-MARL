@@ -259,11 +259,11 @@ We encourage you to read and cite the following papers if you use any part of th
 @eprint{AutoDRIVE-DT-MARL-2025,
 title = {Mixed-Reality Digital Twins: Leveraging the Physical and Virtual Worlds for Hybrid Sim2Real Transition of Multi-Agent Reinforcement Learning Policies}, 
 author = {Chinmay Vilas Samak and Tanmay Vilas Samak and Venkat Narayan Krovi},
-year={2025},
-eprint={2403.10996},
-archivePrefix={arXiv},
-primaryClass={cs.RO},
-url={https://arxiv.org/abs/2403.10996}
+year = {2025},
+print = {2403.10996},
+archivePrefix = {arXiv},
+primaryClass = {cs.RO},
+url = {https://arxiv.org/abs/2403.10996}
 }
 ```
 This work has been accepted in **IEEE Robotics and Automation Letters (RA-L).**
@@ -276,7 +276,8 @@ author = {Tanmay Vilas Samak and Chinmay Vilas Samak and Venkat Krovi},
 year = {2023},
 eprint = {2309.10007},
 archivePrefix = {arXiv},
-primaryClass = {cs.RO}
+primaryClass = {cs.RO},
+url = {https://arxiv.org/abs/2309.10007}
 }
 ```
 This work has been accepted as Multi-Agent Dynamic Games (MAD-Games) Workshop paper at **2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).** The publication can be found on [MAD-Games Workshop Website](https://iros2023-madgames.f1tenth.org/papers/samak.pdf).
