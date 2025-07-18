@@ -254,6 +254,20 @@ For creating your own training configurations, please refer to the [official tra
 
 We encourage you to read and cite the following papers if you use any part of this repository for your research:
 
+#### [Mixed-Reality Digital Twins: Leveraging the Physical and Virtual Worlds for Hybrid Sim2Real Transition of Multi-Agent Reinforcement Learning Policies](https://arxiv.org/abs/2403.10996)
+```bibtex
+@eprint{AutoDRIVE-DT-MARL-2025,
+title = {Mixed-Reality Digital Twins: Leveraging the Physical and Virtual Worlds for Hybrid Sim2Real Transition of Multi-Agent Reinforcement Learning Policies}, 
+author = {Chinmay Vilas Samak and Tanmay Vilas Samak and Venkat Narayan Krovi},
+year={2025},
+eprint={2403.10996},
+archivePrefix={arXiv},
+primaryClass={cs.RO},
+url={https://arxiv.org/abs/2403.10996}
+}
+```
+This work has been accepted in **IEEE Robotics and Automation Letters (RA-L).**
+
 #### [Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem](https://arxiv.org/abs/2309.10007)
 ```bibtex
 @eprint{AutoDRIVE-MARL-2023,
@@ -266,15 +280,3 @@ primaryClass = {cs.RO}
 }
 ```
 This work has been accepted as Multi-Agent Dynamic Games (MAD-Games) Workshop paper at **2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).** The publication can be found on [MAD-Games Workshop Website](https://iros2023-madgames.f1tenth.org/papers/samak.pdf).
-
-#### [A Scalable and Parallelizable Digital Twin Framework for Sustainable Sim2Real Transition of Multi-Agent Reinforcement Learning Systems](https://arxiv.org/abs/2403.10996)
-```bibtex
-@eprint{AutoDRIVE-DT-MARL-2024,
-title = {A Scalable and Parallelizable Digital Twin Framework for Sustainable Sim2Real Transition of Multi-Agent Reinforcement Learning Systems}, 
-author = {Chinmay Vilas Samak and Tanmay Vilas Samak and Venkat Krovi},
-year = {2024},
-eprint = {2403.10996},
-archivePrefix = {arXiv},
-primaryClass = {cs.RO}
-}
-```
