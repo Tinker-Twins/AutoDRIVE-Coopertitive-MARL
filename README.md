@@ -152,7 +152,7 @@ We benchmark cooperative and competitive MARL policies trained with no (NDR), lo
     - Bake lightmaps for larger scenes.
       > ***Note:*** *The lightmap baking process may take several minutes/hours depending upon the computational platform.*
   
-    - For this project, we'll be working with the [Intersection School](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/Intersection%20School.zip) and [Multi-Agent F1TENTH](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/Multi-Agent%20F1TENTH.unity) scenes. Ensure that you can open and run them.
+    - For this project, we'll be working with the [Intersection School - Parallel MARL](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/Intersection%20School%20-%20Parallel%20MARL.zip) and [F1TENTH - Parallel MARL](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/F1TENTH%20-%20Parallel%20MARL.unity) scenes for training, and the [Intersection School - Digital Twin MARL](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/Intersection%20School%20-%20Digital%20Twin%20MARL.unity) and [F1TENTH - Digital Twin MARL](https://github.com/Tinker-Twins/AutoDRIVE/blob/AutoDRIVE-Simulator/Assets/Scenes/F1TENTH%20-%20Digital%20Twin%20MARL.unity) scenes for deployment. Ensure that you can open and run them.
 
 3. Install ML-Agents Unity Package (tested version: `com.unity.ml-agents v2.0.1`):
    
@@ -187,8 +187,8 @@ We benchmark cooperative and competitive MARL policies trained with no (NDR), lo
 ### Programming
 
 Every `agent` needs a script inherited from the `Agent` class. This project contains two such `agent` scripts:
-- [NigelCrossing](https://github.com/Tinker-Twins/Computing-and-Simulation-for-Autonomy/blob/main/Project%20Workspace/Scripts/NigelCrossing.cs): For collaborative multi-agent intersection traversal.
-- [F1TenthRacing](https://github.com/Tinker-Twins/Computing-and-Simulation-for-Autonomy/blob/main/Project%20Workspace/Scripts/F1TenthRacing.cs): For competitive head-to-head autonomous racing.
+- [NigelCrossing](Agents/NigelCrossing.cs): For collaborative multi-agent intersection traversal.
+- [F1TenthRacing](Agents/F1TenthRacing.cs): For competitive head-to-head autonomous racing.
 
 For defining your own agents, you will first need to import the `Unity.MLAgents` namespace as follows:
 ```C#
@@ -230,9 +230,9 @@ After defining your logic, test the functionality by selecting `Heuristic Only` 
 ### Training
 
 1. Create a configuration file (`<config>.yaml`) to define training parameters. This project contains two such `config` files:
-- [NigelCrossing](https://github.com/Tinker-Twins/Computing-and-Simulation-for-Autonomy/blob/main/Project%20Workspace/Training%20Configurations/NigelCrossing.yaml): For collaborative multi-agent intersection traversal using deep reinforcement learning.
-- [F1TenthRacing](https://github.com/Tinker-Twins/Computing-and-Simulation-for-Autonomy/blob/main/Project%20Workspace/Training%20Configurations/F1TenthRacing.yaml): For competitive head-to-head autonomous racing using demonstration-guided deep reinforcement learning.
-  > ***Note:*** *The pre-recorded sub-optimal single-agent driving demonstrations (5 laps) for both the agents are located in [Demonstrations](https://github.com/Tinker-Twins/Computing-and-Simulation-for-Autonomy/tree/main/Project%20Workspace/Demonstrations) directory of this project.*
+- [NigelCrossing](Training/Training%20Configurations/NigelCrossing.yaml): For collaborative multi-agent intersection traversal using deep reinforcement learning.
+- [F1TenthRacing](Training/Training%20Configurations/F1TenthRacing.yaml): For competitive head-to-head autonomous racing using demonstration-guided deep reinforcement learning.
+  > ***Note:*** *The pre-recorded sub-optimal single-agent driving demonstrations (5 laps) for both the agents are located in [Demonstrations](Training/Demonstrations) directory of this project.*
 
 For creating your own training configurations, please refer to the [official training configuration guide](https://github.com/Unity-Technologies/ml-agents/blob/main/docs/Training-Configuration-File.md).
 
@@ -247,7 +247,7 @@ For creating your own training configurations, please refer to the [official tra
     $ conda activate autodrive
     ```
 
-5. Navigate to the [Results](https://github.com/Tinker-Twins/Computing-and-Simulation-for-Autonomy/tree/main/Project%20Workspace/Results) directory:
+5. Navigate to the [Results](Results) directory:
    
    ```bash
     $ cd <path/to/Results>
@@ -264,7 +264,7 @@ For creating your own training configurations, please refer to the [official tra
 
 ### Training Analysis
 
-1. Navigate to the parent folder of [Results](https://github.com/Tinker-Twins/Computing-and-Simulation-for-Autonomy/tree/main/Project%20Workspace/Results) directory:
+1. Navigate to the parent folder of [Results](Results) directory:
    
    ```bash
     $ cd <path/to/parent/folder/of/Results>
@@ -276,7 +276,7 @@ For creating your own training configurations, please refer to the [official tra
    $ tensorboard --logdir Results
    ```
 
-3. Open browser application (tested with Google Chrome) and log on to http://localhost:6006 to view the training results.
+3. Open a browser application (tested with Google Chrome) and log on to http://localhost:6006 to view the training results.
 
     > ***Note:*** *You can view the training results "live" as the training happens, or choose to view it after the training is complete.*
 
@@ -321,7 +321,7 @@ For creating your own training configurations, please refer to the [official tra
 
 1. Craft the reward function(s) carefully; agents can cheat a lot (a.k.a. reward hacking)!
 
-2. Tune the training parameters in `<config>`.yaml file(s) for your own experiments.
+2. Tune the training parameters in `<config>.yaml` file(s) for your own experiments.
 
 3. As far as possible, duplicate the RL agents/environments for parallel (faster) training.
 
