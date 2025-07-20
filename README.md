@@ -136,7 +136,7 @@ We benchmark cooperative and competitive MARL policies trained with no (NDR), lo
 
 2. Install AutoDRIVE Simulator (from source):
      
-    - Clone the Clone `AutoDRIVE-Simulator` branch of the `AutoDRIVE` repository:
+    - Clone the `AutoDRIVE-Simulator` branch of the `AutoDRIVE` repository:
     
       ```bash
       $ git clone --single-branch --branch AutoDRIVE-Simulator https://github.com/Tinker-Twins/AutoDRIVE.git
