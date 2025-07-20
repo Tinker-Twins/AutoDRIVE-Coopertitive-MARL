@@ -278,7 +278,7 @@ For creating your own training configurations, please refer to the [official tra
 
 3. Open a browser application (tested with Google Chrome) and log on to http://localhost:6006 to view the training results.
 
-    > ***Note:*** *You can view the training results "live" as the training happens, or choose to view it after the training is complete.*
+    > ***Note:*** *You can view the training results "live" as the training happens, or choose to view them after the training is complete.*
 
 ### Deployment
 
