@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- AutoDRIVE-ROS Bridge -->
+	<node name="autodrive_ros_bridge" pkg="autodrive_f1tenth" type="server.py" output="screen"/>
+
+  <!-- Global Parameter -->
+  <param name="/use_sim_time" value="false"/>
+
+  <!-- DBW and Odometry Bringup -->
+  <arg name="racecar_version" default="racecar-v2" />
+  <arg name="run_camera" default="false"/>
+  <group ns="vesc">
+    <!-- Joy -->
+    <include file="$(find racecar)/launch/includes/common/joy_teleop.launch.xml" >
+      <arg name="racecar_version" value="$(arg racecar_version)" />
+    </include>
+    <!-- MUX -->
+    <include file="$(find racecar)/launch/mux.launch" />
+    <!-- VESC -->
+    <include file="$(find racecar)/launch/includes/$(arg racecar_version)/vesc.launch.xml" >
+      <arg name="racecar_version" value="$(arg racecar_version)" />
+    </include>
+  </group>
+
+  <!-- LIDAR Bringup -->
+  <include file="$(find racecar)/launch/includes/common/sensors.launch.xml" >
+    <arg name="racecar_version" value="$(arg racecar_version)" />
+  </include>
+
+  <!-- Static Transforms -->
+  <include file="$(find racecar)/launch/includes/$(arg racecar_version)/static_transforms.launch.xml" />
+
+  <!-- AutoDRIVE-Co-Sim Node -->
+	<node name="autodrive_cosim_node" pkg="autodrive_f1tenth" type="cosim.py" output="screen"/>
+
+  <!-- RViz -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find autodrive_f1tenth)/rviz/digital_twin/digital_twin.rviz"/>
+
+</launch>
