@@ -298,7 +298,7 @@ For creating your own training configurations, please refer to the [official tra
 
 4. As far as possible, use a dedicated router with sufficient bandwidth for digital twinning.
 
-5. Please be mindful of the physical setup (available area, driving conditions, signal strength, potential hazards, etc.) during digital twinning. :warning: STAY SAFE! :warning:
+5. Please be mindful of the physical setup (available area, driving conditions, signal strength, potential hazards, etc.) during digital twinning. :warning: **STAY SAFE!** :warning:
 
 ## CITATION
 
