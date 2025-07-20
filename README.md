@@ -46,7 +46,7 @@ Particularly, we adopted environment parallelization (1 to 25 parallel environme
 </p>
 
 <p align="justify">
-We analyzed the effect of agent/environment parallelization on training MARL behaviors. As observed in both the rows, the reduction in training time was quite non-linear since the simulation workload increased with increasing parallelization. Additionally, it should be noted that parallelization beyond a certain point can hurt, wherein the increased simulation workload may slow down the training so much that parallel policy optimization can no longer accelerate it. This *"saturation point"* is dependent on the hardware/software configuration, and is subject to change.
+We analyzed the effect of agent/environment parallelization on training MARL behaviors. As observed in both the rows, the reduction in training time was quite non-linear since the simulation workload increased with increasing parallelization. Additionally, it should be noted that parallelization beyond a certain point can hurt, wherein the increased simulation workload may slow down the training so much that parallel policy optimization can no longer accelerate it. This <i>"saturation point"</i> is dependent on the hardware/software configuration, and is subject to change.
 </p>
 
 ## MARL FORMULATION
