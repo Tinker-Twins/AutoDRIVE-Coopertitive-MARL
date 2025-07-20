@@ -84,7 +84,7 @@ Apart from completing several laps, we noticed some clever strategies that the a
 |:-----------------------------------------:|
 | <img src="Figures/Fig10b.png" width="1500"> |
 
-We propose a hybrid method for transferring the MARL policies from simulation to reality. The term *"hybrid"* specifically alludes to the mixed-reality digital twin (MRDT) framework, which establishes a real-time bi-directional synchronization between the physical and virtual worlds. The intention is to minimize the number of physical agent(s) and environmental element(s) while deploying and validating MARL systems in the real world. The above figures (captured at 1 Hz) depicts the sim2real transfer of the trained MARL policies using the MRDT framework while the figure below (captured at 5 Hz) depicts the possibility of optionally training/fine-tuning MARL policies (e.g., if there is a significant modification in the real-world setup such as the deliberately introduced turf mat in our case) within the same framework (thereby minimizing the experimental setup while enjoying the benefits of real-world data for policy update).
+We propose a hybrid method for transferring the MARL policies from simulation to reality. The term *"hybrid"* specifically alludes to the mixed-reality digital twin (MRDT) framework, which establishes a real-time bi-directional synchronization between the physical and virtual worlds. The intention is to minimize the number of physical agent(s) and environmental element(s) while deploying and validating MARL systems in the real world. The above figures (captured at 1 Hz) depicts the ***sim2real*** transfer of the trained MARL policies using the MRDT framework while the figure below (captured at 5 Hz) depicts the possibility of optionally training/fine-tuning MARL policies (e.g., if there is a significant modification in the real-world setup such as the deliberately introduced turf mat in our case) within the same framework (thereby minimizing the experimental setup while enjoying the benefits of real-world data for policy update).
 
 Here, we deploy a single physical agent in an open space and connect it with its digital twin. The "ego" digital twin operates in a virtual environment with virtual peers, collects observations, optimizes (optionally, during training/fine-tuning) and/or uses (during testing/inference) the MARL policy to plan actions in the digital space. The planned action sequences are relayed back to the physical twin to be executed in the real world, which updates its state in reality. Finally, the ego digital twin is updated based on real-time state estimates of its physical twin (estimated on board) to close the loop. This process is repeated recursively until the experiment is completed.
 
@@ -261,13 +261,44 @@ For creating your own training configurations, please refer to the [official tra
 
 4. Hit the play button in Unity Editor and watch your agent(s) in autonomous mode!
 
+### Sim2Real Transfer
+
+1. Install and verify base packages (drivers, bringups, etc.) on Nigel and F1TENTH.
+
+2. Install the [ROS packages](Sim2Real/ROS%20API) provided in this repository on the respective vehicles.
+
+    > ***Note:*** *You can use the [Python API](Sim2Real/Python%20API) for preliminary testing.*
+
+3. Launch the `digital_twin.launch` file for the respective vehicle.
+
+    ```bash
+    $ roslaunch autodrive_nigel digital_twin.launch # For Nigel
+    $ roslaunch autodrive_f1tenth digital_twin.launch # For F1TENTH
+    ```
+
+4. Launch AutoDRIVE Simulator executable:
+
+    ```bash
+    $ ./AutoDRIVE \Simulator.x86_64
+    ```
+
+5. Enter the `IP Address` and `Port Number` (default: 4567) of the vehicle's on-board computer within the AutoDRIVE Simulator. You can obtain the IP address using `ifconfig` command on Linux. The Port Number need not be changed unless it is occupied by some other process.
+
+    > ***Note:*** *For digital twinning, the workstation running AutoDRIVE Simulator and the vehicle(s) running AutoDRIVE Devkit (ROS API) must be on a shared network and discoverable to each other. You can test this using the `ping` command on Linux.*
+
+6. Hit the `Connect` button in AutoDRIVE Simulator to establish the bi-directional digital thread between simulation and reality.
+
 ## HELPFUL TIPS
 
-1. Craft the reward function carefully; agents can cheat a lot!
+1. Craft the reward function(s) carefully; agents can cheat a lot (a.k.a. reward hacking)!
 
-2. Tune the training parameters in `<config>`.yaml file.
+2. Tune the training parameters in `<config>`.yaml file(s) for your own experiments.
 
-3. As long as possible, duplicate the training agents/environments within the scene to ensure parallel (faster) training.
+3. As far as possible, duplicate the RL agents/environments for parallel (faster) training.
+
+4. As far as possible, use a dedicated router with sufficient bandwidth for digital twinning.
+
+5. Please be mindful of the physical setup (available area, driving conditions, signal strength, potential hazards, etc.) during digital twinning. :warning: STAY SAFE! :warning:
 
 ## CITATION
 
