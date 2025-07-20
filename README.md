@@ -1,6 +1,6 @@
 # Mixed-Reality Digital Twins for Hybrid Sim2Real Transfer of Multi-Agent Reinforcement Learning Policies
 
-| <img src="Media/Fig1a.png" width="500"> | <img src="Media/Fig1b.png" width="500"> |
+| <img src="Figures/Fig1a.png" width="500"> | <img src="Figures/Fig1b.png" width="500"> |
 |:--------------------:|:--------------------:|
 | **Cooperative MARL** | **Competitive MARL** |
 
@@ -11,13 +11,13 @@
 
 ## DIGITAL TWINS
 
-| <img src="Media/Fig2a.png" width="500"> | <img src="Media/Fig2b.png" width="500"> | <img src="Media/Fig2c.png" width="500"> | <img src="Media/Fig2d.png" width="500"> |
+| <img src="Figures/Fig2a.png" width="500"> | <img src="Figures/Fig2b.png" width="500"> | <img src="Figures/Fig2c.png" width="500"> | <img src="Figures/Fig2d.png" width="500"> |
 |:------------------:|:-----------------:|:--------------------:|:-------------------:|
 | **Physical Nigel** | **Virtual Nigel** | **Physical F1TENTH** | **Virtual F1TENTH** |
 
 We leveraged [AutoDRIVE Simulator](https://github.com/Tinker-Twins/AutoDRIVE/tree/AutoDRIVE-Simulator) to develop physically and graphically realistic digital twin models of [Nigel](https://autodrive-ecosystem.github.io) and [F1TENTH](https://f1tenth.org), two scaled autonomous vehicle platforms with unique qualities and capabilities. This process involved modeling, calibrating and simulating physically accurate vehicle dynamics, physics-based sensors and actuators as well as vehicle-environment interaction, while equally weighing the lighting and rendering aspects for photorealistic visual fidelity. The focus of this process was to train sim2real-worthy MARL policies by bridging the ***real2sim*** gap between simulation and reality.
 
-| <img src="Media/Fig3a.png" width="500"> | <img src="Media/Fig3b.png" width="500"> |
+| <img src="Figures/Fig3a.png" width="500"> | <img src="Figures/Fig3b.png" width="500"> |
 |:----------------------:|:------------------------:|
 | **Nigel Digital Twin** | **F1TENTH Digital Twin** |
 
@@ -25,9 +25,9 @@ From MARL perspective, the said simulation framework was developed modularly usi
 
 ## SIMULATION PARALLELIZATION
 
-| <img src="Media/Fig4a.png" width="500"> | <img src="Media/Fig4b.png" width="500"> | <img src="Media/Fig4c.png" width="500"> | <img src="Media/Fig4d.png" width="500"> |
+| <img src="Figures/Fig4a.png" width="500"> | <img src="Figures/Fig4b.png" width="500"> | <img src="Figures/Fig4c.png" width="500"> | <img src="Figures/Fig4d.png" width="500"> |
 |:---------------------------------------:|:---------------------------------------:|:---------------------------------------:|:---------------------------------------:|
-| <img src="Media/Fig4e.png" width="500"> | <img src="Media/Fig4f.png" width="500"> | <img src="Media/Fig4g.png" width="500"> | <img src="Media/Fig4h.png" width="500"> |
+| <img src="Figures/Fig4e.png" width="500"> | <img src="Figures/Fig4f.png" width="500"> | <img src="Figures/Fig4g.png" width="500"> | <img src="Figures/Fig4h.png" width="500"> |
 
 Following is an overview of the simulation parallelization schemes supported by AutoDRIVE Simulator:
 
@@ -41,7 +41,7 @@ We analyzed the effect of agent/environment parallelization on training MARL beh
 
 ## MARL FORMULATION
 
-| <img src="Media/Fig5a.png" width="500"> | <img src="Media/Fig5b.png" width="500"> |
+| <img src="Figures/Fig5a.png" width="500"> | <img src="Figures/Fig5b.png" width="500"> |
 |:-----------------------------------------------------------------:|:--------------------------------------------------------------:|
 | **Deep Reinforcement Learning Architecture for Cooperative MARL** | **Demonstration-Guided DRL Architecture for Competitive MARL** |
 
@@ -51,51 +51,51 @@ The competitive MARL problem (right sub-figure) was also formulated as a partial
 
 ## MARL TRAINING
 
-| <img src="Media/Fig6a.png" width="500"> | <img src="Media/Fig6b.png" width="500"> | <img src="Media/Fig6c.png" width="500"> |
+| <img src="Figures/Fig6a.png" width="500"> | <img src="Figures/Fig6b.png" width="500"> | <img src="Figures/Fig6c.png" width="500"> |
 |:---------------------------------------:|:---------------------------------------:|:---------------------------------------:|
-| <img src="Media/Fig6d.png" width="500"> | <img src="Media/Fig6e.png" width="500"> | <img src="Media/Fig6f.png" width="500"> |
+| <img src="Figures/Fig6d.png" width="500"> | <img src="Figures/Fig6e.png" width="500"> | <img src="Figures/Fig6f.png" width="500"> |
 
 For cooperative MARL (top row), we analyzed the effect of both centralized training and decentralized execution (CTDE) or multi-agent PPO (MAPPO) as well as decentralized learning or independent PPO (IPPO) on training. The key training metrics being analyzed here were the cumulative reward, episode length and policy entropy. A general indication of “good” training is that the cumulative reward is maximized and then saturated, the episode length is adequate (longer duration implies agents wandering off in the environment, while very short duration may be indicative of agents colliding/overstepping lane bounds), and the policy entropy (i.e., randomness) has decreased steadily as the training progressed. It is to be noted that the predominant cause for the difference in trends of training metrics for single and multi-agent scenarios is the higher stochasticity of the multi-agent scenario, which is especially evident from the policy entropy.
 
-| <img src="Media/Fig7a.png" width="500"> | <img src="Media/Fig7b.png" width="500"> | <img src="Media/Fig7c.png" width="500"> |
+| <img src="Figures/Fig7a.png" width="500"> | <img src="Figures/Fig7b.png" width="500"> | <img src="Figures/Fig7c.png" width="500"> |
 |:---------------------------------------:|:---------------------------------------:|:---------------------------------------:|
-| <img src="Media/Fig7d.png" width="500"> | <img src="Media/Fig7e.png" width="500"> | <img src="Media/Fig7f.png" width="500"> |
+| <img src="Figures/Fig7d.png" width="500"> | <img src="Figures/Fig7e.png" width="500"> | <img src="Figures/Fig7f.png" width="500"> |
 
 For competitive MARL (bottom row), the training phase of the proposed approach was analyzed in order to gain a better insight into the multi-agent PPO (MAPPO) process, and comment on the effectiveness of the hybrid learning strategy adopted therein. Particularly, we analyzed the imitation learning (behavioral cloning loss, GAIL reward) and reinforcement learning (curiosity reward, extrinsic reward) metrics along with the episode length and policy entropy.  A general indication of “good” training is that the behavioral cloning loss has decayed smoothly, the GAIL, curiosity and extrinsic rewards are maximized and then saturated, the episode length is adequate (longer duration implies agents driving slowly, while very short duration may be indicative of agents colliding without lap completion), and the policy entropy (i.e., randomness) has decreased steadily as the training progressed. It is to be noted that the non-zero offset in behavioral cloning loss indicates that the agents have not over-fit to the demonstrations; rather, they have explored the state space quite well to maximize the extrinsic reward by adopting aggressive “racing” behaviors.
 
 ## EMERGENT BEHAVIORS
 
-| <img src="Media/Fig8a.png" width="500"> | <img src="Media/Fig8b.png" width="500"> | <img src="Media/Fig8c.png" width="500"> |
+| <img src="Figures/Fig8a.png" width="500"> | <img src="Figures/Fig8b.png" width="500"> | <img src="Figures/Fig8c.png" width="500"> |
 |:---------------------------------------:|:---------------------------------------:|:---------------------------------------:|
-| <img src="Media/Fig8d.png" width="500"> | <img src="Media/Fig8e.png" width="500"> | <img src="Media/Fig8f.png" width="500"> |
+| <img src="Figures/Fig8d.png" width="500"> | <img src="Figures/Fig8e.png" width="500"> | <img src="Figures/Fig8f.png" width="500"> |
 
 The trained policies for cooperative MARL were deployed onto the respective simulated vehicles. Figures in the first row present three key stages of the "throttle-priority" collision avoidance behavior, which primarily controls vehicle throttle to speed-up/slow-down agents to avoid collisions. The first stage depicts vehicles 1, 2, and 4 approaching the conflict zone with almost equivalent velocities, while vehicle 3 travels slowly. The second stage shows vehicle 1 executing a left turn, vehicles 2 and 3 slowing down, and vehicle 4 speeding up to avoid potential collision. Finally, the third stage illustrates vehicle 1 performing a subtle right turn to reach its goal, while vehicles 2 and 4 also reach their respective goals, and vehicle 3 continues driving slowly. Figures in the second row display three critical stages of the multi-agent intersection traversal scenario. In the first frame, vehicles 1 and 4 successfully avoid collision. The second frame showcases vehicle 1 finding a gap between vehicles 2 and 3 to reach its goal. In the third frame, vehicles 2 and 3 evade collision, while vehicle 4 approaches its goal, and vehicle 1 is re-spawned.
 
-| <img src="Media/Fig9a.png" width="500"> | <img src="Media/Fig9b.png" width="500"> | <img src="Media/Fig9c.png" width="500"> |
+| <img src="Figures/Fig9a.png" width="500"> | <img src="Figures/Fig9b.png" width="500"> | <img src="Figures/Fig9c.png" width="500"> |
 |:---------------------------------------:|:---------------------------------------:|:---------------------------------------:|
-| <img src="Media/Fig9d.png" width="500"> | <img src="Media/Fig9e.png" width="500"> | <img src="Media/Fig9f.png" width="500"> |
+| <img src="Figures/Fig9d.png" width="500"> | <img src="Figures/Fig9e.png" width="500"> | <img src="Figures/Fig9f.png" width="500"> |
 
 The trained policies for competitive MARL were deployed onto the respective simulated vehicles, which were made to race head-to-head on the same track with a phase-shifted initialization (as in real F1TENTH competitions).
 Apart from completing several laps, we noticed some clever strategies that the agents had learned to block/overtake their opponent. Figures in the first row present three snapshots of a block-block-overtake sequence, wherein the red agent kept blocking the blue agent throughout the straight, but the blue agent took a wider turn with higher velocity and took advantage of its under-steer characteristic to cut in front of the red agent and overtake it. Figures in the second row display three snapshots of a let-pass-and-overtake sequence, wherein the blue agent found a gap between the red agent and inside edge of the track and opportunistically overtook it. However, due to its under-steering characteristic, it went wider in the corner, thereby allowing the red agent to overtake it and re-claim the leading position.
 
 ## SIM2REAL TRANSFER
 
-| <img src="Media/Fig10a.png" width="1500"> |
+| <img src="Figures/Fig10a.png" width="1500"> |
 |:-----------------------------------------:|
-| <img src="Media/Fig10b.png" width="1500"> |
+| <img src="Figures/Fig10b.png" width="1500"> |
 
 We propose a hybrid method for transferring the MARL policies from simulation to reality. The term *"hybrid"* specifically alludes to the mixed-reality digital twin (MRDT) framework, which establishes a real-time bi-directional synchronization between the physical and virtual worlds. The intention is to minimize the number of physical agent(s) and environmental element(s) while deploying and validating MARL systems in the real world. The above figures (captured at 1 Hz) depicts the sim2real transfer of the trained MARL policies using the MRDT framework while the figure below (captured at 5 Hz) depicts the possibility of optionally training/fine-tuning MARL policies (e.g., if there is a significant modification in the real-world setup such as the deliberately introduced turf mat in our case) within the same framework (thereby minimizing the experimental setup while enjoying the benefits of real-world data for policy update).
 
 Here, we deploy a single physical agent in an open space and connect it with its digital twin. The "ego" digital twin operates in a virtual environment with virtual peers, collects observations, optimizes (optionally, during training/fine-tuning) and/or uses (during testing/inference) the MARL policy to plan actions in the digital space. The planned action sequences are relayed back to the physical twin to be executed in the real world, which updates its state in reality. Finally, the ego digital twin is updated based on real-time state estimates of its physical twin (estimated on board) to close the loop. This process is repeated recursively until the experiment is completed.
 
-| <img src="Media/Fig11.png" width="1500"> |
+| <img src="Figures/Fig11.png" width="1500"> |
 |:-----------------------------------------:|
 
 This way, we can exploit the real-world characteristics of vehicle dynamics and tire-road interactions while being resource-altruistic by augmenting environmental element(s) and peer agent(s) in the digital space. This also alleviates the safety concern of the experimental vehicles colliding with each other or the environmental element(s), especially as operational scales and number of agents increase.
 
 ## PERFORMANCE BENCHMARKS
 
-| <img src="Media/Fig12a.png" width="500"> | <img src="Media/Fig12b.png" width="500"> |
+| <img src="Figures/Fig12a.png" width="500"> | <img src="Figures/Fig12b.png" width="500"> |
 |:---------------------------------:|:---------------------------------:|
 | **Cooperative MARL Benchmarking** | **Competitive MARL Benchmarking** |
 
