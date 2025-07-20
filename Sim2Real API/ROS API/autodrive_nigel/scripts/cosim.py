@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 ################################################################################
 
@@ -45,8 +45,8 @@ def callback_cosim(cosim_data):
     cosim_mode = Int32()
     pose_command = Pose()
     cosim_mode = 1
-    pose_command.position.x = cosim_data.pose.pose.position.x
-    pose_command.position.y = cosim_data.pose.pose.position.y
+    pose_command.position.x = cosim_data.pose.pose.position.x - 1.19
+    pose_command.position.y = cosim_data.pose.pose.position.y + 0.15
     pose_command.position.z = cosim_data.pose.pose.position.z
     pose_command.orientation.x = cosim_data.pose.pose.orientation.x
     pose_command.orientation.y = cosim_data.pose.pose.orientation.y
