@@ -335,17 +335,18 @@ We encourage you to read and cite the following papers if you use any part of th
 
 #### [Mixed-Reality Digital Twins: Leveraging the Physical and Virtual Worlds for Hybrid Sim2Real Transition of Multi-Agent Reinforcement Learning Policies](https://arxiv.org/abs/2403.10996)
 ```bibtex
-@eprint{AutoDRIVE-DT-MARL-2025,
-title = {Mixed-Reality Digital Twins: Leveraging the Physical and Virtual Worlds for Hybrid Sim2Real Transition of Multi-Agent Reinforcement Learning Policies}, 
-author = {Chinmay Vilas Samak and Tanmay Vilas Samak and Venkat Narayan Krovi},
-year = {2025},
-print = {2403.10996},
-archivePrefix = {arXiv},
-primaryClass = {cs.RO},
-url = {https://arxiv.org/abs/2403.10996}
+@article{AutoDRIVE-MRDT-MARL-2025,
+author={Samak, Chinmay and Samak, Tanmay and Krovi, Venkat},
+journal={IEEE Robotics and Automation Letters}, 
+title={Mixed-Reality Digital Twins: Leveraging the Physical and Virtual Worlds for Hybrid Sim2Real Transition of Multi-Agent Reinforcement Learning Policies}, 
+year={2025},
+volume={10},
+number={9},
+pages={9040-9047},
+doi={10.1109/LRA.2025.3592085}
 }
 ```
-This work has been accepted in **IEEE Robotics and Automation Letters (RA-L).**
+This work has been accepted in **IEEE Robotics and Automation Letters (RA-L).** The publication can be found on [IEEE Xplore](https://ieeexplore.ieee.org/document/11091473).
 
 #### [Multi-Agent Deep Reinforcement Learning for Cooperative and Competitive Autonomous Vehicles using AutoDRIVE Ecosystem](https://arxiv.org/abs/2309.10007)
 ```bibtex
